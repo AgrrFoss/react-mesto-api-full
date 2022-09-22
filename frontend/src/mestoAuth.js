@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:4000'
+export const BASE_URL = 'http://api.orlov.gregori.nomoredomains.sbs'
 
 export const register = (email, password) => {
     return fetch(`${BASE_URL}/signup`, {
