@@ -86,5 +86,6 @@ class Api {
 }
 
 const api = new Api ('http://api.orlov.gregori.nomoredomains.sbs');
+// const api = new Api ('http://localhost:4000');
 
 export default api;
