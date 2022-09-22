@@ -4,3 +4,7 @@
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
 http://orlov.gregori.nomoredomains.sbs/ Сслыка на сайт в Яндекс облаке.
+
+IP 51.250.66.91
+Frontend https://orlov.gregori.nomoredomains.sbs/
+Backend https://api.orlov.gregori.nomoredomains.sbs/
