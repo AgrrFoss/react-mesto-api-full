@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const AuthError = require('../errors/auth_err');
 
+const { JWT_SECRET } = process.env;
+
 module.exports = (req, res, next) => {
   const token = req.cookies.jwt;
   if (!token) {
@@ -11,7 +13,7 @@ module.exports = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, '4jsx');
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (e) {
     const err = new AuthError('Необходима авторизация. Ваш токен не действителен');
     next(err);
