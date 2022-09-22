@@ -76,13 +76,13 @@ app.post(
   createUser,
 );
 
+app.use('/signout', signOut);
+
 app.use(auth);
 
 app.use('/users', require('./routes/users'));
 
 app.use('/cards', require('./routes/cards'));
-
-app.use('/signout', signOut);
 
 app.use((req, res, next) => {
   const err = new NotFoundError('Страница не найдена.');
