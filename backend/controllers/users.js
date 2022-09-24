@@ -104,7 +104,10 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.signOut = (req, res, next) => {
-  res.clearCookie('jwt')
+  res.clearCookie('jwt', {
+    sameSite: 'none',
+    secure: true,
+  })
     .send({ message: 'cookies удалены' })
     .end();
   next();
