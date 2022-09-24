@@ -69,6 +69,7 @@ export const signOut = () => {
         headers: {
             "Content-Type": "application/json"
         },
+        
         credentials: 'include'
     })
         .then((res => res))

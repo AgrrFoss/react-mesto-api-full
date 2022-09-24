@@ -37,7 +37,6 @@ function App() {
       Promise.all([api.getUserInfo(), api.getCard()])
         .then((res) => {
           const [userInfo, cards] = res
-          console.log(userInfo)
           setCurrentUser(userInfo);
           setUserEmail(userInfo.email);
           setCards(cards);
@@ -55,7 +54,7 @@ function App() {
   function getInfo() {
     mestoAuth.getContent()
     .then((res) => {
-      if (res) {
+      if (!res.hasOwnProperty('message')) {
         setLoggedIn(true);
         history.push('/');
       } else {

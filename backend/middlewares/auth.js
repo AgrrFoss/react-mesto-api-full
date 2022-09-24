@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
   try {
     payload = jwt.verify(token, JWT_SECRET);
   } catch (e) {
-    const err = new AuthError(`Необходима авторизация. Ваш токен не действителен ${token} = ${JWT_SECRET}`);
+    const err = new AuthError('Необходима авторизация. Ваш токен не действителен');
     next(err);
     return;
   }
