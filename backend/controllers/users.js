@@ -5,7 +5,7 @@ const BadReqError = require('../errors/bad_req');
 const NotFoundError = require('../errors/not_found');
 const RepeatEmailError = require('../errors/repeat_email_error');
 
-const { NODE_ENV, JWT_SECRET } = process.env;
+const { NODE_ENV = 'develop', JWT_SECRET = '4jsx' } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
